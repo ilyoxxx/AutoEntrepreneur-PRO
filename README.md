@@ -81,7 +81,8 @@ autoentrepreneur-pro/
 │   ├── styles.css   # Design system complet
 │   └── app.js       # Logique applicative complète
 └── public/
-    └── icon.png     # Icône de l'application
+    └── icon.png    # Icône de l'application
+    └── icon.ico    # Icône de l'application en .ico
 ```
 
 ---
