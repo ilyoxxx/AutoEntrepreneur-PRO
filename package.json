@@ -1,0 +1,45 @@
+{
+  "name": "autoentrepreneur-pro",
+  "version": "1.0.0",
+  "description": "Application de gestion pour auto-entrepreneurs français — URSSAF, factures, CA",
+  "main": "main.js",
+  "author": "AutoEntrepreneur Pro",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "fr.autoentrepreneur.pro",
+    "productName": "AutoEntrepreneur Pro",
+    "copyright": "Copyright 2024",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "preload.js", "src/**/*", "public/**/*"],
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }],
+      "icon": "public/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "public/icon.icns",
+      "category": "public.app-category.finance"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "public/icon.png",
+      "category": "Finance"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "language": "1036"
+    }
+  }
+}
