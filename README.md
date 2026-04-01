@@ -112,3 +112,18 @@ Pour une intégration réelle avec l'API URSSAF :
 | Prestations de services (BIC) | 21,2% | 77 700 € |
 | Professions libérales (BNC) | 21,1% | 77 700 € |
 | Libérales réglementées (CIPAV) | 21,2% | 77 700 € |
+
+## 📜 Licence
+
+Le logiciel « AutoEntrepreneur Pro » est une application distribuée gratuitement.
+
+Son utilisation, sa copie et sa modification sont autorisées uniquement à des fins personnelles, éducatives ou non commerciales.
+
+Toute utilisation commerciale est strictement interdite, notamment :
+- la vente du logiciel, en tout ou partie
+- sa distribution contre rémunération
+- son intégration dans une offre commerciale
+
+Toute violation de ces dispositions pourra faire l’objet de poursuites conformément au droit français relatif à la propriété intellectuelle.
+
+© 2026 AutoEntrepreneur Pro – Tous droits réservés.
