@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';" />
+  <title>AutoEntrepreneur Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Custom titlebar -->
+  <div id="titlebar">
+    <div id="titlebar-drag">
+      <span id="app-logo">◆</span>
+      <span id="app-title">AutoEntrepreneur Pro</span>
+    </div>
+    <div id="titlebar-controls">
+      <button onclick="window.electron.window.minimize()" title="Réduire">─</button>
+      <button onclick="window.electron.window.maximize()" title="Agrandir">□</button>
+      <button id="btn-close" onclick="window.electron.window.close()" title="Fermer">✕</button>
+    </div>
+  </div>
+
+  <div id="app">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div id="sidebar-profile">
+        <div id="avatar">AE</div>
+        <div id="profile-info">
+          <span id="profile-name">Mon entreprise</span>
+          <span id="urssaf-status" class="badge badge-disconnected">URSSAF ✕</span>
+        </div>
+      </div>
+
+      <ul id="nav-menu">
+        <li class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">◉</span>
+          <span>Tableau de bord</span>
+        </li>
+        <li class="nav-item" data-page="factures">
+          <span class="nav-icon">◈</span>
+          <span>Factures</span>
+          <span class="nav-badge" id="badge-factures">0</span>
+        </li>
+        <li class="nav-item" data-page="clients">
+          <span class="nav-icon">◇</span>
+          <span>Clients</span>
+        </li>
+        <li class="nav-item" data-page="declarations">
+          <span class="nav-icon">◆</span>
+          <span>Déclarations</span>
+        </li>
+        <li class="nav-item" data-page="urssaf">
+          <span class="nav-icon">⬡</span>
+          <span>URSSAF</span>
+        </li>
+        <li class="nav-item" data-page="documents">
+          <span class="nav-icon">▣</span>
+          <span>Documents</span>
+        </li>
+        <li class="nav-item" data-page="settings">
+          <span class="nav-icon">◎</span>
+          <span>Paramètres</span>
+        </li>
+      </ul>
+
+      <div id="sidebar-footer">
+        <div id="quota-bar">
+          <span>Plafond annuel</span>
+          <div id="quota-track"><div id="quota-fill"></div></div>
+          <span id="quota-label">0 / 77 700 €</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main id="content">
+      <!-- Pages injected by JS -->
+    </main>
+  </div>
+
+  <div id="modal-overlay" class="hidden">
+    <div id="modal-box">
+      <div id="modal-header">
+        <span id="modal-title"></span>
+        <button id="modal-close">✕</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
